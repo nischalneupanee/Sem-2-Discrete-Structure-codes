@@ -1,12 +1,18 @@
-//2.Write a C program to find the greatest common divisor (GCD) of two integers using the Euclidean algorithm.(print in a table format)
+//Write a C program to find the greatest common divisor (GCD) of two integers using the Euclidean algorithm.(print in a table format)
 
 #include <stdio.h>
 #include <stdlib.h>
 
-// print euclidean algorith in table format 
+
 
 void print_euclidean_algorithm(int a, int b)
 {
+    if(b>a)
+    {
+        int temp = a;
+        a=b;
+        b=temp;
+    }
     int q, r;
     printf("q\ta\tb\tr\n");
     while (b != 0)
